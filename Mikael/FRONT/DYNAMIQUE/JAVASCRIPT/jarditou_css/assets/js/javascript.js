@@ -1,4 +1,3 @@
-
 var bouton1= document.getElementById("Id_btn1");
 bouton1.addEventListener("click",clickbtn1);
 
@@ -56,6 +55,3 @@ function clickbtn4(){
         alert("Vérifiez en Console (F12), ce que vous venez de saisir...");
     }
 }
-
-var reponse1 = window.prompt("Saisissez votre nom");
-var reponse2 = window.prompt("Saisissez votre couleur préférée");
