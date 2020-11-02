@@ -4,7 +4,9 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 30/10/2020 : Reprise des cours :
             "Algorithmique et programmation"
             "Le langage Javascript"
-
+02/11/2020 : Reprise des cours :
+            "Algorithmique et programmation"
+            "Le langage Javascript"
 
 
 
