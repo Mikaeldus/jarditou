@@ -47,11 +47,25 @@ bouton4.addEventListener("click",clickbtn4);
 function clickbtn4(){
 
     var prenom = prompt("Veuillez saisir votre prénom");
-    if(prenom==null){
+    if(prenom===null){
         alert("Vous avez cliqué sur Annuler");
     }
     else{
         console.log("Voici le prénom que vous avez saisi: "+prenom);
-        alert("Vérifiez en Console (F12), ce que vous venez de saisir...");
+        var nom = prompt("Veuillez saisir votre nom");
+        if(nom===null){
+            alert("Vous avez cliquer sur annuler");
+        }
+        else{
+            console.log("Voici le nom que vous avez saisi: "+nom);
+            var Sexe = confirm("Etes-vous un homme ?");
+            if (Sexe === true){
+                alert("Bonjour Monsieur "+" "+prenom+""+" "+nom+"\nBienvenu sur notre site Web");
+            }
+            else{
+                alert("Bonjour Madame "+" "+prenom+""+" "+nom+"\nBienvenu sur notre site Web");
+            }
+        }
     }
+    console.log("Voici les information que vous avez saisi: "+nom+"\n "+prenom);
 }
