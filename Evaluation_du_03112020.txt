@@ -1,0 +1,46 @@
+03/11/2020
+## Git OK	-----OK-----
+
+## HTML 
+
+Attention ton jarditou html est dans un dossier `jarditou_css` -----OK-----
+
+Slogan maquant sur la page tableau "La qualité depuis 70 ans"	-----OK-----
+
+* Chaque page du site doit contenir un élément de titre unique de section <H1>	-----OK-----
+
+* Chaque image ou élément non textuel est doté d'une alternative textuelle (`alt="" title=""`) :
+
+OK mais évites les tirets "-" sur les alt pour éviter que les logiciels d'accessibilité les lisent
+
+### index.html OK	-----OK-----
+
+### tableau.html 	-----OK-----
+
+* Le tableau est construit à l'aide des balises `<table><thead><tbody><tr><td>` (De plus l'utilisation de `<tfoot>` est appréciée, mais pas dans notre cas présent)
+
+Attention : La fermeture de la balise </tbody> est mal placée    -----OK-----
+
+### contact.html OK
+
+  `<form  action="http://bienvu.net/script.php " method=" get ou post">` OK -----OK-----
+
+  `<label for=" " >` qui pointent sur les `<input id=" ">` oui mais attention à la syntaxe des inputs de type radio :	-----OK----- 
+
+developer.mozilla.org 		-------J'ai lu la doc pour le type radio------
+
+
+
+## CSS OK
+
+Attention à la responsivité des images sur grand ecran 
+
+img {
+
+  width: 100%; height: auto;
+
+}		-----OK-----
+
+## Bootstrap  OK
+
+Important, C'est juste après la balise <body> sur toutes tes pages qu'il faut ajouter une <div class="container-fluid">		-----OK-----
