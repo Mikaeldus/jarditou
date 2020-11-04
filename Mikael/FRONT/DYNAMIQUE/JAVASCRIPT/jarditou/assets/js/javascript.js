@@ -129,6 +129,28 @@ function clickbtn3() {
 // ---------------------Exercice JS 07 CALCULETTE --------------------
 
 
+// ---------------------Exercice JS 08 SAISIE --------------------
+
+var bouton3 = document.getElementById(`Id_btn5`);
+bouton3.addEventListener(`click`, clickbtn5);
+
+function clickbtn5(){
+
+    var nombre = 1;
+    var prenom = ``;
+
+    do{
+        prenom = prompt(`Saisissez le prénom N° ${nombre} \n ou click sur Annuler pour arreter la saisie.`);
+        if(prenom != null && prenom !=``){
+            console.log(`Prénom N° ${nombre} : ${prenom}`);
+            nombre++;
+        }
+    }while (prenom != null && prenom != ``);
+}
+
+// ------------ ! mettre le négatif de l'égalité et mettre window.prompt pour lancer la fonction au démarrage de la page en déactivant le bouton -----------
+// ---------------------Exercice JS 08 SAISIE --------------------
+
 // ---------------------FUNCTION --------------------
 
 function operation(nb1, nb2, op) {
