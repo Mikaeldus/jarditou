@@ -235,7 +235,7 @@ function clickbtn9(){
         mot = parseInt(prompt(`Veuillez saisir un mot : `));
     }
     var motlong = mot.length;
-    var count = 0;
+    var valeur = 0;
     for(i = 0; i < motlong; i++){
         switch (mot[i]){
             case 'a':
@@ -245,12 +245,12 @@ function clickbtn9(){
             case 'u':
             case 'y':
             
-            count++;
+            valeur++;
             break;
             default:'';
         }
     }
-    console.log(`Voici le nombre de voyelle dans ${mot} : ${count}`);
+    console.log(`Voici le nombre de voyelle dans ${mot} : ${valeur}`);
 }
 
 // ---------------------Exercice JS 08 VOYELLES --------------------
