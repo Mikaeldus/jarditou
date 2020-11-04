@@ -131,8 +131,8 @@ function clickbtn3() {
 
 // ---------------------Exercice JS 08 SAISIE --------------------
 
-var bouton3 = document.getElementById(`Id_btn5`);
-bouton3.addEventListener(`click`, clickbtn5);
+var bouton5 = document.getElementById(`Id_btn5`);
+bouton5.addEventListener(`click`, clickbtn5);
 
 function clickbtn5(){
 
@@ -150,6 +150,112 @@ function clickbtn5(){
 
 // ------------ ! mettre le négatif de l'égalité et mettre window.prompt pour lancer la fonction au démarrage de la page en déactivant le bouton -----------
 // ---------------------Exercice JS 08 SAISIE --------------------
+
+// ---------------------Exercice JS 08 Entier inférieur à N --------------------
+
+var bouton6 = document.getElementById(`Id_btn6`);
+bouton6.addEventListener(`click`, clickbtn6);
+
+function clickbtn6(){
+
+    var nb = 0;
+    var i = 0;
+
+    while (isNaN(nb)){
+        nb = parseInt(prompt(`Saisissez un nombre : `));
+    }
+    for ( i = 0 ; i < nb ; i++){
+        console.log(i);
+    }
+}
+
+// ---------------------Exercice JS 08 Entier inférieur à N --------------------
+
+// ---------------------Exercice JS 08 MOYENNE --------------------
+
+var bouton7 = document.getElementById(`Id_btn7`);
+bouton7.addEventListener(`click`, clickbtn7);
+
+function clickbtn7(){
+
+    var nb = parseInt(prompt(`Saisir un entier : `));
+    var i = 0;
+    var somme = 0;
+    var moyenne = 0;
+
+    while (isNaN(nb)){
+        nb = parseInt(prompt(`Saisissez un premier nombre : `));
+    }
+    while ( nb != 0){
+        somme += nb ;
+        i++;
+        moyenne = somme / i;
+        console.log(`somme : ${somme}`);
+        console.log(`Moyenne : ${moyenne}`); 
+        nb = parseInt(prompt(`Saisir un entier : `));
+    }
+}
+
+
+// ---------------------Exercice JS 08 MOYENNE --------------------
+
+// ---------------------Exercice JS 08 MULTIPLES --------------------
+
+var bouton8 = document.getElementById(`Id_btn8`);
+bouton8.addEventListener(`click`, clickbtn8);
+
+function clickbtn8(){
+
+    var X = parseInt(prompt(`Saisissez un entier : `));
+    while (isNaN(X)){
+        X = parseInt(prompt(`Saisissez un premier nombre : `));
+    }
+    var N = parseInt(prompt(`Saisissez le nombre de multiple : `));
+    while (isNaN(N)){
+        N = parseInt(prompt(`Saisissez un premier nombre : `));
+    }
+    var somme = 0;
+    for ( i = 0 ; i < N ; i++){
+        somme = i * X;
+        console.log(`${X} * ${i} = ${somme}`);
+    }
+}
+
+// ---------------------Exercice JS 08 MULTIPLES --------------------
+
+// ---------------------Exercice JS 08 VOYELLES --------------------
+
+var bouton9 = document.getElementById(`Id_btn9`);
+bouton9.addEventListener(`click`, clickbtn9);
+
+function clickbtn9(){
+    var mot = prompt(`Veuillez saisir un mot : `).toLowerCase();
+
+    while(!isNaN(mot)){
+        mot = parseInt(prompt(`Veuillez saisir un mot : `));
+    }
+    var motlong = mot.length;
+    var count = 0;
+    for(i = 0; i < motlong; i++){
+        switch (mot[i]){
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'y':
+            
+            count++;
+            break;
+            default:'';
+        }
+    }
+    console.log(`Voici le nombre de voyelle dans ${mot} : ${count}`);
+}
+
+// ---------------------Exercice JS 08 VOYELLES --------------------
+
+
 
 // ---------------------FUNCTION --------------------
 
