@@ -255,6 +255,51 @@ function clickbtn9(){
 
 // ---------------------Exercice JS 08 VOYELLES --------------------
 
+// ---------------------Exercice JS 09 IMG --------------------
+var bouton10 = document.getElementById(`Id_btn10`);
+bouton10.addEventListener(`click`, clickbtn10);
+
+function clickbtn10(){
+
+    var img = 'src/img/papillon.jpg';
+    var X = prompt(`Veuillez saisir un nombre: `);
+    if (!X) {
+        recommencer();
+    }
+    else{
+        var Xparsed = parseInt(X);
+        console.log(`Voici le premier chiffre : ${X}`);
+        var Y = prompt (`Veuillez saisir un multiplicateur : `);
+        if (!Y) {
+            recommencer();
+        }
+        else{
+            var Yparsed = parseInt(Y);
+            console.log(`Voici le multiplicateur : ${Y}`);
+        }
+    }      
+    
+    operation(X,Y);        
+}
+
+// ---------------------Exercice JS 09 FONCTION --------------------
+
+function operation(X,Y){
+    var carre = X * X * X;
+    var multi = Y * X;
+    var texte1 = `Le Cube de ${X} est egal à ${carre}`;
+    var texte2 = `Le produit de ${X} * ${Y} est égale à ${multi} `;
+
+    document.getElementById(t1).innerHTML = texte1;
+    document.getElementById(t2).innerHTML = texte2;
+}
+
+
+
+
+
+// ---------------------Exercice JS 09 IMG --------------------
+
 
 
 // ---------------------FUNCTION --------------------
