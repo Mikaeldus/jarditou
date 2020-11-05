@@ -9,6 +9,7 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
             "Le langage Javascript"
 03/11/2020 : Début de la pratique sur "Le langage Javascript"
 04/11/2020 : Reprise du JS
+05/11/2020 : Reprise au centre (JS)
 
 
 
