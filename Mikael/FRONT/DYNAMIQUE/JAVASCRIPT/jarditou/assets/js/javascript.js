@@ -263,15 +263,15 @@ function clickbtn10() {
     var x = prompt(`Veuillez saisir un nombre: `);
     var y = prompt(`Veuillez saisir un multiplicateur :`);
     var img = './src/img/papillon.jpg';
-    operationssss(x, y); 
-    affichImg(img); 
+    operationssss(x, y);
+    affichImg(img);
 }
 
 
 
 // ---------------------Exercice JS 09 FONCTION --------------------
 function affichImg(img) {
-    
+
     var img = document.createElement('img');
     img.src = './src/img/papillon.jpg';
     var container = document.getElementById('testt');
@@ -288,41 +288,41 @@ function operationssss(x, y) {
     document.getElementById('t1').innerHTML = test;
     document.getElementById('t2').innerHTML = test1;
 }
-    // ---------------------Exercice JS 09 IMG --------------------
+// ---------------------Exercice JS 09 IMG --------------------
 
 
 
-    // ---------------------FUNCTION --------------------
+// ---------------------FUNCTION --------------------
 
-    function operation(nb1, nb2, op) {
-        switch (op) {
-            case "/":
-                if (nb2 === 0) {
-                    alert(`Impossible de diviser par zéro`);
-                }
-                else {
-                    var somme = nb1 / nb2;
-                    alert(`Somme : ${somme}`);
-                }
-                break;
-
-            case "*":
-                var somme = nb1 * nb2;
+function operation(nb1, nb2, op) {
+    switch (op) {
+        case "/":
+            if (nb2 === 0) {
+                alert(`Impossible de diviser par zéro`);
+            }
+            else {
+                var somme = nb1 / nb2;
                 alert(`Somme : ${somme}`);
-                break;
+            }
+            break;
 
-            case "-":
-                var somme = nb1 - nb2;
-                alert(`Somme : ${somme}`);
-                break;
+        case "*":
+            var somme = nb1 * nb2;
+            alert(`Somme : ${somme}`);
+            break;
 
-            case "+":
-                var somme = nb1 + nb2;
-                alert(`Somme : ${somme}`);
-        }
+        case "-":
+            var somme = nb1 - nb2;
+            alert(`Somme : ${somme}`);
+            break;
+
+        case "+":
+            var somme = nb1 + nb2;
+            alert(`Somme : ${somme}`);
     }
+}
 
-    function recommencer() {
-        alert(`Veuillez recommencer ! `);
-    }
+function recommencer() {
+    alert(`Veuillez recommencer ! `);
+}
 
