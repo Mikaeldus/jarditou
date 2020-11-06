@@ -1,3 +1,34 @@
+function operation(nb1, nb2, op) {
+    switch (op) {
+        case "/":
+            if (nb2 === 0) {
+                alert(`Impossible de diviser par zéro`);
+            }
+            else {
+                var somme = nb1 / nb2;
+                alert(`Somme : ${somme}`);
+            }
+            break;
+
+        case "*":
+            var somme = nb1 * nb2;
+            alert(`Somme : ${somme}`);
+            break;
+
+        case "-":
+            var somme = nb1 - nb2;
+            alert(`Somme : ${somme}`);
+            break;
+
+        case "+":
+            var somme = nb1 + nb2;
+            alert(`Somme : ${somme}`);
+    }
+}
+
+function recommencer() {
+    alert(`Veuillez recommencer ! `);
+}
 
 // ---------------------Exercice JS 05 --------------------
 
@@ -290,39 +321,26 @@ function operationssss(x, y) {
 }
 // ---------------------Exercice JS 09 IMG --------------------
 
+// ---------------------Exercice JS 10 String Token --------------------
+
+var bouton11 = document.getElementById(`Id_btn11`);
+bouton11.addEventListener(`click`, clickbtn11);
+
+function clickbtn11() {
+
+    
+    
+    
+}
+
+
+
+
+// ---------------------Exercice JS 10 String Token --------------------
+
 
 
 // ---------------------FUNCTION --------------------
 
-function operation(nb1, nb2, op) {
-    switch (op) {
-        case "/":
-            if (nb2 === 0) {
-                alert(`Impossible de diviser par zéro`);
-            }
-            else {
-                var somme = nb1 / nb2;
-                alert(`Somme : ${somme}`);
-            }
-            break;
 
-        case "*":
-            var somme = nb1 * nb2;
-            alert(`Somme : ${somme}`);
-            break;
-
-        case "-":
-            var somme = nb1 - nb2;
-            alert(`Somme : ${somme}`);
-            break;
-
-        case "+":
-            var somme = nb1 + nb2;
-            alert(`Somme : ${somme}`);
-    }
-}
-
-function recommencer() {
-    alert(`Veuillez recommencer ! `);
-}
 
