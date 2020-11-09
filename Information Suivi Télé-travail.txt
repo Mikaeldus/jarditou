@@ -1,5 +1,5 @@
 Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
-              8h30-12h00 vendredi
+              8h30-12h30 vendredi
 
 30/10/2020 : Reprise des cours :
             "Algorithmique et programmation"
@@ -11,7 +11,7 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 04/11/2020 : Reprise du JS
 05/11/2020 : Reprise au centre (JS)
 06/11/2020 : Reprise du Télé-travail sur le JS
-
+09/11/2020 : Reprise du JS 
 
 
 
