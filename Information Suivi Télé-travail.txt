@@ -12,6 +12,7 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 05/11/2020 : Reprise au centre (JS)
 06/11/2020 : Reprise du Télé-travail sur le JS
 09/11/2020 : Reprise du JS 
+10/11/2020 : JS poursuite exo
 
 
 
