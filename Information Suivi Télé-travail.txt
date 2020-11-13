@@ -15,7 +15,7 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 10/11/2020 : JS poursuite exo
 11/11/2020 : Jour férié
 12/11/2020 : Finition et rendu JS
-
+13/11/2020 : JS pour les pages web
 
 
 
