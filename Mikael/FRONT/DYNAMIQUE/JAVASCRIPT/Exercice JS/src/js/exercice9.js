@@ -40,7 +40,6 @@ function operationDivers(x, y) {
 
     document.getElementById('t1').innerHTML = operation;
     document.getElementById('t2').innerHTML = operation1;
-
 }
 // -------------- Exercice  JS Cours 09 IMG -----------
 
