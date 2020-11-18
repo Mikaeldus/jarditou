@@ -1,7 +1,6 @@
-window.onload = (() =>{
+window.onload = (() => {
     document.getElementById('bntMulti').addEventListener('click', multiplication);
 })
-   
 
 
 
@@ -9,27 +8,29 @@ window.onload = (() =>{
 
 
 
-function multiplication(){
-      
+
+function multiplication() {
+    var aff = document.getElementById(`afficher`);
+    aff.textContent="";
     var n = document.getElementById('nombre').value;
     var tab = [];
 
-    if(isNaN(n)){
-        alert(`Veuillez rentrer des nombres !!`);
-    }else{
-        for (i=1 ; i<= 10 ; i++){
-        
-            var somme = n*i;
-            tab[i]=` ${n} * ${i} = ${somme} \n`;  
-        } 
-        alert(`${tab}`);
-    }
-    
-    
-    
-    
-    
-    
-    
+    if (!isNaN(n)) {
+        for (i = 1; i <= 10; i++) {
 
+            var somme = n * i;
+            tab[i] = ` ${n} * ${i} = ${somme} \n`;
+        }
+    } else {
+        alert(`Veuillez rentrer des nombres !!`);
+    }
+    tab.forEach(function(mult){
+        let p = document.createElement('p');
+        p.append(mult);
+        aff.append(p);
+        //aff.append(`<p>${mult}</p>`);
+    })
+    // aff.textContent = `${tab.join('\n')}`;      
 }
+
+
