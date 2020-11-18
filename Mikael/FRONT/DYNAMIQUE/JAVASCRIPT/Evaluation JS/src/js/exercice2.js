@@ -1,5 +1,5 @@
 window.onload = (() =>{
-    document.getElementById('button').addEventListener('click', multiplication);
+    document.getElementById('bntMulti').addEventListener('click', multiplication);
 })
    
 
@@ -12,13 +12,24 @@ window.onload = (() =>{
 function multiplication(){
       
     var n = document.getElementById('nombre').value;
-    var aff = document.getElementById('afficher');
-    
-    for (i=1 ; i<= 10 ; i++){
+    var tab = [];
+
+    if(isNaN(n)){
+        alert(`Veuillez rentrer des nombres !!`);
+    }else{
+        for (i=1 ; i<= 10 ; i++){
         
-        var somme = n*i;
-        alert(`${n} * ${i} = ${somme}`);
-    } 
+            var somme = n*i;
+            tab[i]=` ${n} * ${i} = ${somme} \n`;  
+        } 
+        alert(`${tab}`);
+    }
+    
+    
+    
+    
+    
+    
     
 
 }
