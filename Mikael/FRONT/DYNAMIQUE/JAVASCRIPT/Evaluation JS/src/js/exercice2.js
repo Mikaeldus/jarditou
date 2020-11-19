@@ -3,12 +3,6 @@ window.onload = (() => {
 })
 
 
-
-
-
-
-
-
 function multiplication() {
     var aff = document.getElementById(`afficher`);
     aff.textContent="";
@@ -28,9 +22,9 @@ function multiplication() {
         let p = document.createElement('p');
         p.append(mult);
         aff.append(p);
-        //aff.append(`<p>${mult}</p>`);
+        
     })
-    // aff.textContent = `${tab.join('\n')}`;      
+       
 }
 
 
