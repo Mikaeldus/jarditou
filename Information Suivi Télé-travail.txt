@@ -18,10 +18,12 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 13/11/2020 : JS pour les pages web
 16/11/2020 : Poursuite JS
 17/11/2020 : Poursuite JS
+18/11/2020 : Evaluation JS
+19/11/2020 : Evaluation JS
 
 
 
 
-Logiciel LARP
+
 
 
