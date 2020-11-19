@@ -2,6 +2,8 @@ window.onload = (() => {
 
 })
 
+
+// je creer ma function pour vérifier mon formulaire 
 function verif(formulaire) {
     
     // on teste et on recupere les valuer du formulaire 
@@ -24,51 +26,59 @@ function verif(formulaire) {
 
 
 
-
+// Ma function pour Verif le Nom 
 function verifNom(nom) {
+    // je creer ma variable "isOk" qui est vérifier part ma function, si c'est bon elle renvoit true sinon else 
     var isOK = verifAuMoins1Char(nom);
     if (isOK) {
         return true;
     } else {
+        // j'indique le champ non rempli à l'utilisateur 
         var missNom = document.getElementById(`missNom`);
         missNom.textContent = `* Champ requis`;
         return false;
     }
 }
 
-
+// Ma function pour Verif le Prenom
 function verifPrenom(prenom) {
+    // je creer ma variable "isOk" qui est vérifier part ma function, si c'est bon elle renvoit true sinon else
     var isOK = verifAuMoins1Char(prenom);
     if (isOK) {
         return true;
     } else {
+        // j'indique le champ non rempli à l'utilisateur 
         var missPrenom = document.getElementById(`missPrenom`);
         missPrenom.textContent = `* Champ requis`;
         return false;
     }
 }
 
+// Ma function pour Verif le le codepostale
 function verifCodePostal(codePostal) {
-
-    var missPostale = document.getElementById('missCodePostale');
+    // Si mon code postale ne fait pas 5 nombres alors else 
     if (inputCodePostal.value.length === 5) {
         return true;
     } else {
+        // j'indique le champ non rempli à l'utilisateur 
+        var missPostale = document.getElementById('missCodePostale');
         missPostale.textContent = `* Champ requis`;
         return false;
     }
 }
 
-
+// Ma function pour vérifier mon Email 
 function verifEmail(email) {
 
-    var missMail = document.getElementById('missMail');
+    
     // Regexp email from internet
     var regexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+    // je fais la vérification grace à la regexp si bon return true sinon else 
     if (email.match(regexp)) {
         return true;
     } else {
+        // j'indique le champ non rempli à l'utilisateur 
+        var missMail = document.getElementById('missMail');
         missMail.textContent = `* Champ requis`;
         return false;
     }
