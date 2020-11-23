@@ -3,9 +3,9 @@ Ouvrir le terminal :
 Taper : 
 mysql --host==localhost --user=util1 --password=0000 exo1
  
-show grants for 'util1'@localhost;
+show grants for 'util1'@'%';
 +---------------------------------------------------------+
-| Grants for util1@localhost                              |
+| Grants for util1@%                              |
 +---------------------------------------------------------+
 | GRANT USAGE ON *.* TO 'util1'@'localhost'               |
 | GRANT ALL PRIVILEGES ON `exo1`.* TO 'util1'@'localhost' |
@@ -30,5 +30,3 @@ show grants for 'util3'@'%';
 | GRANT USAGE ON *.* TO 'util3'@'%'                    |
 | GRANT CREATE, LOCK TABLES ON `exo1`.* TO 'util3'@'%' |
 +------------------------------------------------------+
-
-J'ai laisser l'utilisateur en localhost et le 2ème et 3ème en toute position.
