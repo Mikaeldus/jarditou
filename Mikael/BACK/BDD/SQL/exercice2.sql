@@ -1,0 +1,18 @@
+CREATE USER 'util1'@'%' IDENTIFIED BY '0000';
+
+GRANT ALL PRIVILEGES ON exo1.* TO 'util1'@'%';
+
+
+
+
+CREATE USER 'util2'@'%' IDENTIFIED BY '0000';
+
+GRANT CREATE,SELECT ON exo1.* TO 'util2'@'%';
+
+
+
+
+CREATE USER 'util3'@'%' IDENTIFIED BY '0000';
+
+GRANT CREATE,LOCK TABLES ON exo1.* TO 'util3'@'%';
+
