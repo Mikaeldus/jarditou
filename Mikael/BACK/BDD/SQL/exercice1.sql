@@ -1,55 +1,57 @@
 CREATE DATABASE exo1; USE exo1;
+
 CREATE TABLE station(
-		num_station INT NOT NULL,
-		nom_station VARCHAR (50) NOT NULL, 
-		PRIMARY KEY (num_station)
+		sta_num_station INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+		sta_nom_station VARCHAR (50) NOT NULL
 );
+
 CREATE TABLE hotel(
-		capacite_hotel VARCHAR (50) NOT NULL,
-		categorie_hotel VARCHAR (50) NOT NULL,
-		nom_hotel VARCHAR (50) NOT NULL,
-		adresse_hotel VARCHAR (50) NOT NULL,
-		num_hotel INT NOT NULL,
-		num_station INT NOT NULL, 
-		PRIMARY KEY (num_hotel)
+		hot_capacite_hotel VARCHAR (50) NOT NULL,
+		hot_categorie_hotel VARCHAR (50) NOT NULL,
+		hot_nom_hotel VARCHAR (50) NOT NULL,
+		hot_adresse_hotel VARCHAR (50) NOT NULL,
+		hot_num_hotel INT NOT NULL PRIMARY KEY,
+		sta_num_station INT NOT NULL 
 );
+
 CREATE TABLE chambre(
-		capacite_chambre VARCHAR (50) NOT NULL,
-		degre_confort VARCHAR (50) NOT NULL,
-		exposition VARCHAR (50) NOT NULL,
-		type_chambre VARCHAR (50) NOT NULL,
-		num_chambre INT NOT NULL,
-		num_hotel INT NOT NULL, 
-		PRIMARY KEY (num_chambre) 
+		cham_capacite_chambre VARCHAR (50) NOT NULL,
+		cham_degre_confort VARCHAR (50) NOT NULL,
+		cham_exposition VARCHAR (50) NOT NULL,
+		cham_type_chambre VARCHAR (50) NOT NULL,
+		cham_num_chambre INT NOT NULL PRIMARY KEY,
+		hot_num_hotel INT NOT NULL  
 );
+
 CREATE TABLE reservation(
-		num_chambre INT NOT NULL,
-		num_client INT NOT NULL,
-		date_debut VARCHAR (50) NOT NULL,
-		date_fin VARCHAR (50) NOT NULL,
-		date_reservation VARCHAR (50) NOT NULL,
-		montant_arrhes VARCHAR (50) NOT NULL,
-		prix_total VARCHAR (50) NOT NULL, 
-		PRIMARY KEY (num_chambre,num_client)
+		cham_num_chambre INT NOT NULL,
+		cli_num_client INT NOT NULL,
+		reser_date_debut VARCHAR (50) NOT NULL,
+		reser_date_fin VARCHAR (50) NOT NULL,
+		reser_date_reservation VARCHAR (50) NOT NULL,
+		reser_montant_arrhes VARCHAR (50) NOT NULL,
+		reser_prix_total VARCHAR (50) NOT NULL 
+		,PRIMARY KEY (cham_num_chambre,cli_num_client)
 );
 CREATE TABLE Client(
-		adress_client VARCHAR (50) NOT NULL,
-		nom_client VARCHAR (50) NOT NULL,
-		prenom_client VARCHAR (50) NOT NULL,
-		num_client INT NOT NULL, 
-		PRIMARY KEY (num_client)
+		cli_adress_client VARCHAR (50) NOT NULL,
+		cli_nom_client VARCHAR (50) NOT NULL,
+		cli_prenom_client VARCHAR (50) NOT NULL,
+		cli_num_client INT NOT NULL PRIMARY KEY
 );
 
 ALTER TABLE hotel
-ADD FOREIGN KEY (num_station) REFERENCES station(num_station);
+ADD CONSTRAINT hotel_station_FK FOREIGN KEY (sta_num_station) REFERENCES station(sta_num_station);
 
 ALTER TABLE chambre
-ADD FOREIGN KEY (num_hotel) REFERENCES hotel(num_hotel);
+ADD CONSTRAINT chambre_hotel_FK FOREIGN KEY (hot_num_hotel) REFERENCES hotel(hot_num_hotel);
 
 ALTER TABLE reservation
-ADD FOREIGN KEY (num_chambre) REFERENCES chambre(num_chambre);
+ADD CONSTRAINT reservation_chambre_FK FOREIGN KEY (cham_num_chambre) REFERENCES chambre(cham_num_chambre);
 
 ALTER TABLE reservation
-ADD FOREIGN KEY (num_client) REFERENCES client(num_client);
+ADD CONSTRAINT reservation_client_FK FOREIGN KEY (cli_num_client) REFERENCES Client(cli_num_client);
+
+
 
  
