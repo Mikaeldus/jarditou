@@ -31,4 +31,4 @@ show grants for 'util3'@'%';
 | GRANT CREATE, LOCK TABLES ON `exo1`.* TO 'util3'@'%' |
 +------------------------------------------------------+
 
-J'ai laisser l'utilisateur en localhost et le 2ème en toute position.
+J'ai laisser l'utilisateur en localhost et le 2ème et 3ème en toute position.
