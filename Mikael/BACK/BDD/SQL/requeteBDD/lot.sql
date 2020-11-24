@@ -26,9 +26,31 @@ WHERE cli_ville NOT LIKE 'LON%'
 
 --6 - Afficher la liste des hôtels située sur la ville de Bretou et possédant une catégorie>3 Le résultat doit faire apparaître le nom de l'hôtel, ville et la catégorie
 SELECT hot_nom, hot_categorie, hot_ville FROM hotel.hotel
-WHERE hot_categorie in (3)
--- permet d'indiquer toutes les lignes ou le champ categorie est "3"
+WHERE hot_categorie >= 3 AND hot_ville = 'Bretou'
+-- permet d'indiquer toutes les lignes ou le champ categorie est "3" ou supérieur et dans la ville "Bretou"
+
+
+
 
 ---------------LOT2------------------
 
 --7 - Afficher la liste des hôtels avec leur station Le résultat doit faire apparaître le nom de la station, le nom de l’hôtel, la catégorie, la ville)
+SELECT sta_nom, hot_nom, hot_categorie, hot_ville
+FROM hotel.station, hotel.hotel
+WHERE sta_nom = sta_nom
+
+--8 - Afficher la liste des chambres et leur hôtel Le résultat doit faire apparaître le nom de l’hôtel, la catégorie, la ville, le numéro de la chambre)
+SELECT hot_nom, hot_categorie, hot_ville, cha_numero
+FROM hotel.hotel A 
+JOIN hotel.chambre B
+ON A.hot_sta_id = B.cha_hot_id
+
+--9 - Afficher la liste des chambres de plus d'une place dans des hôtels situés sur la ville de Bretou Le résultat doit faire apparaître le nom de l’hôtel, la catégorie, la ville, le numéro de la chambre et sa capacité)
+SELECT hot_nom, hot_categorie, hot_ville, cha_numero, cha_capacite 
+FROM hotel.hotel A 
+JOIN hotel.chambre B
+ON A.hot_sta_id = B.cha_hot_id
+AND hot_ville = 'Bretou'
+
+--10 - Afficher la liste des réservations avec le nom des clients Le résultat doit faire apparaître le nom du client, le nom de l’hôtel, la date de réservation
+

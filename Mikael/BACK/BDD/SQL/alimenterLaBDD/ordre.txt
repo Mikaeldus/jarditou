@@ -10,13 +10,13 @@ Réfléchissez à l’ordre de peuplement des tables afin pour respecter les con
 
 Reflexion : 
 
-Je pense qu'il faut commencer à alimenter "la table fournies"> "la table entcom">  produit.csv > "la table ligcom"> vente.csv >
+Je pense qu'il faut commencer à alimenter "la table fournies"> "la table entcom">  produit.csv > "la table ligcom"> vente.csv 
 
 
 phase 1-2 : table fournies / table entcom
 
 phase 3 : importation du fichier produit.csv en commande ";"
 
-phase 4 : table ligcom ( attribut d'une valeur au champ codart)
+phase 4 : table ligcom
 
 phase 5 : importation de fichier vente.csv en ";"
