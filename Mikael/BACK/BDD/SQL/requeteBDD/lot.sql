@@ -1,4 +1,4 @@
----------------LOt1------------------
+---------------LOT1------------------
 
 -- 1 - Afficher la liste des hôtels. Le résultat doit faire apparaître le nom de l’hôtel et la ville
 SELECT hot_nom FROM hotel
@@ -25,3 +25,10 @@ WHERE cli_ville NOT LIKE 'LON%'
 -- permet d'afficher tous les clients avec leur ville, qui n'habite pas Londre.
 
 --6 - Afficher la liste des hôtels située sur la ville de Bretou et possédant une catégorie>3 Le résultat doit faire apparaître le nom de l'hôtel, ville et la catégorie
+SELECT hot_nom, hot_categorie, hot_ville FROM hotel.hotel
+WHERE hot_categorie in (3)
+-- permet d'indiquer toutes les lignes ou le champ categorie est "3"
+
+---------------LOT2------------------
+
+--7 - Afficher la liste des hôtels avec leur station Le résultat doit faire apparaître le nom de la station, le nom de l’hôtel, la catégorie, la ville)
