@@ -53,4 +53,27 @@ ON A.hot_sta_id = B.cha_hot_id
 AND hot_ville = 'Bretou'
 
 --10 - Afficher la liste des réservations avec le nom des clients Le résultat doit faire apparaître le nom du client, le nom de l’hôtel, la date de réservation
+SELECT  res_date, hot_nom, cli_nom 
+FROM hotel.client 
+JOIN hotel.reservation ON res_id = cli_id
+JOIN hotel.chambre ON cha_id = cli_id
+JOIN hotel.hotel ON hot_id = cli_id 
+
+--11 - Afficher la liste des chambres avec le nom de l’hôtel et le nom de la station Le résultat doit faire apparaître le nom de la station, le nom de l’hôtel, le numéro de la chambre et sa capacité)
+SELECT sta_nom, cha_numero, hot_nom, cha_capacite
+FROM hotel.chambre
+JOIN hotel.station ON sta_id = cha_id
+JOIN hotel.hotel ON hot_sta_id = cha_id
+
+--12 - Afficher les réservations avec le nom du client et le nom de l’hôtel Le résultat doit faire apparaître le nom du client, le nom de l’hôtel, la date de début du séjour et la durée du séjour
+SELECT cli_nom, hot_nom, res_date_debut, DATEDIFF( res_date_fin,  res_date_debut)
+FROM hotel.client
+JOIN hotel.hotel ON hot_id = cli_id
+JOIN hotel.reservation ON res_id = cli_id
+
+
+
+---------------LOT3------------------
+
+--13 - Compter le nombre d’hôtel par station
 
