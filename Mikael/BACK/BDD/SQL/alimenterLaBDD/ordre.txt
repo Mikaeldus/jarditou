@@ -1,0 +1,22 @@
+LE TRAVAIL A EFFECTUER
+Grâce aux instructions du langage DML que vous venez de découvrir, vous allez pouvoir ajouter, modifier et supprimer des lignes dans les tables de la base de données.
+
+Mais auparavant, un temps de réflexion : La structure de la base de données vous impose de remplir les tables dans un ordre défini. Quel est l’ordre à adopter ? Argumenter.
+
+Et insérer les données, en tenant compte que les données des tables PRODUIT et VENTE vous sont fournies sous forme de fichier CSV dans la phase 2 qu’il faudra importer dans la base de données MySQL.
+
+Réfléchissez à l’ordre de peuplement des tables afin pour respecter les contraintes clés étrangères !
+
+
+Reflexion : 
+
+Je pense qu'il faut commencer à alimenter "la table fournies"> "la table entcom"> vente.csv > produit.csv pour finir part "la table ligcom".
+
+
+phase 1-2 : table fournies / table entcom
+
+phase 4 : importation du fichier produit.csv en commande ";"
+
+phase 5 : table ligcom ( attribut d'une valeur au champ codart)
+
+phase 3 : importation de fichier vente.csv en ";"
