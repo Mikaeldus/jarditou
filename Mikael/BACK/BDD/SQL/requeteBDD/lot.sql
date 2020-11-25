@@ -104,3 +104,7 @@ JOIN hotel.reservation ON res_id = cli_id
 AND cli_nom = 'Squire'
 
 --17 - Afficher la durée moyenne des réservations par station
+SELECT sta_nom, avg(DATEDIFF(res_date_fin, res_date_debut)) 
+FROM reservation, hotel, chambre, station   
+WHERE res_cha_id = cha_id AND cha_hot_id = hot_id  
+GROUP BY sta_id;
