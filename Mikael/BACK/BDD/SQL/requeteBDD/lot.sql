@@ -76,4 +76,31 @@ JOIN hotel.reservation ON res_id = cli_id
 ---------------LOT3------------------
 
 --13 - Compter le nombre d’hôtel par station
+SELECT sta_nom, count(hot_sta_id) 
+from hotel, station 
+where hot_sta_id = sta_id 
+group by sta_id
 
+--14 - Compter le nombre de chambre par station
+SELECT sta_nom, COUNT(cha_hot_id) 
+FROM station 
+JOIN hotel ON hot_sta_id = sta_id 
+JOIN chambre ON cha_hot_id = hot_id
+GROUP BY sta_id
+
+--15 - Compter le nombre de chambre par station ayant une capacité > 1
+SELECT sta_nom, COUNT(cha_hot_id)
+FROM station 
+JOIN hotel ON hot_sta_id = sta_id 
+JOIN chambre ON cha_hot_id = hot_id
+WHERE cha_capacite >1
+GROUP BY sta_id
+
+--16 - Afficher la liste des hôtels pour lesquels Mr Squire a effectué une réservation
+SELECT cli_nom, hot_nom, res_date_debut
+FROM hotel.client
+JOIN hotel.hotel ON hot_id = cli_id
+JOIN hotel.reservation ON res_id = cli_id
+AND cli_nom = 'Squire'
+
+--17 - Afficher la durée moyenne des réservations par station
