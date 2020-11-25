@@ -6,14 +6,16 @@ FROM entcom
 WHERE numfou = '9120'
 
 --Afficher le code des fournisseurs pour lesquels des commandes ont été passées.
-SELECT numcom 
-FROM entcom, fournis
-WHERE entcom.numfou = fournis.numfou
+SELECT fournis.numfou
+FROM entcom
+JOIN fournis ON entcom.numfou = fournis.numfou 
+GROUP BY fournis.numfou
+ 
 
 --Afficher le nombre de commandes fournisseurs passées, et le nombre de fournisseur concernés.
 SELECT fournis.numfou, COUNT(entcom.numcom)
-FROM entcom, fournis
-WHERE entcom.numfou = fournis.numfou
+FROM entcom
+JOIN fournis ON entcom.numfou = fournis.numfou 
 GROUP BY fournis.numfou
 
 --Editer les produits ayant un stock inférieur ou égal au stock d'alerte et dont la quantité annuelle est inférieur est inférieure à1000 (informations à fournir : n° produit, libelléproduit, stock, stockactuel d'alerte, quantitéannuelle)
@@ -33,3 +35,16 @@ GROUP BY fournis.numfou
 ORDER BY posfou DESC, nomfou ASC
 
 --Quelles sont les commandes passées au mois de mars et avril?
+SELECT ligcom.numcom, derliv
+FROM ligcom
+WHERE MONTH(derliv) BETWEEN 3 AND 4
+
+UNION 
+
+SELECT entcom.numcom, datcom
+FROM entcom
+WHERE MONTH(datcom) BETWEEN 3 AND 4
+GROUP BY entcom.numcom
+--Apres avoir recompter pour vérifier il manque juste une commande en 70010 ----
+
+--Quelles sont les commandes du jour qui ont des observations particulières ?(Affichage numéro de commande, date de commande)
