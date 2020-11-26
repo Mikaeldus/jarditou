@@ -146,3 +146,51 @@ GROUP BY nomfou
 ORDER BY Stock DESC
 
 --18 En fin d'année, sortir la liste des produits dont la quantité réellement commandée dépasse 90% de la quantité annuelle prévue.
+SELECT libart, sum(qtecde) AS quantite 
+FROM produit
+JOIN ligcom ON produit.codart = ligcom.codart
+GROUP BY libart, qteann
+HAVING (qteann * 0.9) < SUM(qtecde)
+
+--19 Calculer le chiffre d'affaire par fournisseur pour l'année 93 sachant que les prix indiqués sont hors taxes et que le taux de TVA est 20%.
+SELECT fournis.nomfou, SUM(qtecde * priuni *1.2) AS Prixttc
+FROM entcom
+JOIN ligcom ON ligcom.numcom = entcom.numcom
+JOIN fournis ON entcom.numfou = fournis.numfou 
+GROUP BY nomfou
+
+--------------------------------Les besoins de mise a jour --------------------------------
+
+--1 Application d'une augmentation de tarif de 4% pour le prix 1, 2% pour le prix2 pour le fournisseur 9180
+UPDATE vente
+SET prix1 = prix1 * 1.04, prix2 = prix2 * 1.02
+WHERE numfou = 9180
+
+--2 Dans la table vente, mettre à jour le prix2 des articles dont le prix2 est null, en affectant a valeur de prix.
+UPDATE vente
+SET prix2 = prix1
+WHERE prix2 IS NULL
+
+--3 Mettre à jour le champ obscom en positionnant '*****' pour toutes les commandes dont le fournisseur a un indice de satisfaction <5
+UPDATE entcom
+SET obscom = '*****'
+FROM entcom
+JOIN fournis ON entcom.numfou = fournis.numfou
+WHERE satisf < 5
+
+--4 Suppression du produit I110
+DELETE FROM papyrus.vente
+WHERE vente.codart = 'I110';
+
+DELETE FROM papyrus.ligcom
+WHERE ligcom.codart = 'I110';
+
+DELETE FROM papyrus.produit
+WHERE produit.codart = 'I110';
+
+
+--5 Suppression des commandes qui n'ont aucune ligne de commande
+DELETE FROM papyrus.ligcom
+WHERE ligcom.qteliv = '0';
+
+--6
