@@ -73,3 +73,13 @@ FROM fournis
 JOIN entcom ON entcom.numfou = fournis.numfou
 
 --11 Sortir les produits des commandes ayant le mot "urgent' en observation?(Afficher le numéro de commande, le nom du fournisseur, le libellé du produit et le sous total= quantité commandée * Prix unitaire)
+SELECT entcom.numcom, nomfou, libart, SUM(qtecde * priuni) AS soustotal
+FROM entcom
+JOIN fournis ON entcom.numfou = fournis.numfou
+JOIN ligcom ON entcom.numcom = ligcom.numcom
+JOIN produit ON produit.codart = ligcom.codart
+WHERE obscom LIKE '%urgent%'     
+GROUP BY entcom.numcom, nomfou, libart
+ORDER BY soustotal DESC
+
+--12 Coder de 2manières différentes la requête suivante:Lister lenom desfournisseurs susceptibles de livrer au moins un article
