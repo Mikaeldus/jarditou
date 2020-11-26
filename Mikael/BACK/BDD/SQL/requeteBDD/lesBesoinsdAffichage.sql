@@ -193,4 +193,13 @@ WHERE produit.codart = 'I110';
 DELETE FROM papyrus.ligcom
 WHERE ligcom.qteliv = '0';
 
---6
+--6 Supression des lignes de commande dont les commandes n'ont pas d'observation
+
+Pour déactiver les clef etrangere 
+SET FOREIGN_KEY_CHECKS = 0;
+
+DELETE FROM papyrus.entcom 
+WHERE obscom NOT LIKE 'com%';
+
+pour réactiver :
+SET FOREIGN_KEY_CHECKS = 1;
