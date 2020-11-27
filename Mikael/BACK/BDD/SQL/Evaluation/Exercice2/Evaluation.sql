@@ -49,4 +49,29 @@ ORDER BY CA DESC
 
 
 --6 Liste des pays dont les clients ont passé commande de produits fournis par « Exotic Liquids » :
+SELECT shipCountry AS pays
+FROM orders
+JOIN northwind.`order details` ON northwind.`order details`.OrderID = orders.OrderID
+JOIN products ON products.ProductID = northwind.`order details`.ProductID
+JOIN suppliers ON suppliers.SupplierID = products.SupplierID
+WHERE suppliers.SupplierID = '1'
+GROUP BY shipCountry
+
+-- j'affiche tous les pays qui ont passer commande avec Exotic Liquids, en reliant toute les tables à cause des clefs etrangères.
+
+--7 Montant des ventes de 1997 :
+SELECT SUM(UnitPrice * Quantity) AS `Montant Ventes 1997`
+FROM northwind.`order details`
+JOIN orders ON northwind.`order details`.OrderID = orders.OrderID 
+WHERE YEAR(orders.OrderDate) = '1997'
+-- j'affiche le globale des ventes, ensuite je met une condition que les années 1997, j'ai reliés les tables.
+
+--8 Montant des ventes de 1997 mois par mois :
+SELECT MONTH(orders.OrderDate) AS `Mois 1997`, SUM(UnitPrice * Quantity) AS `Montant Ventes 1997`
+FROM northwind.`order details`
+JOIN orders ON northwind.`order details`.OrderID = orders.OrderID
+WHERE YEAR(orders.OrderDate) = '1997'
+GROUP BY MONTH(orders.OrderDate)
+
+-- 
 
