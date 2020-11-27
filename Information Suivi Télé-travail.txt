@@ -22,9 +22,9 @@ Télé-travail: 8h30-12h00 12h45-17h00 lundi-jeudi
 19/11/2020 : Evaluation JS
 20/11/2020 : Back : création de la base de données
 23/11/2020 : Back : création de la base de données
-24/11/2020 : Back : Alimenter la Base de teste
-25/11/2020 : Back : Alimenter la Base de teste
-26/11/2020 : Back : Alimenter la Base de teste 
-
+24/11/2020 : Back : Alimenter la Base de test
+25/11/2020 : Back : Alimenter la Base de test
+26/11/2020 : Back : Interroger la Base de données
+27/11/2020 : Back : Evaluation bases de données
 
 
