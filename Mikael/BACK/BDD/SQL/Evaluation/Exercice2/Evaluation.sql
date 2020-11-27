@@ -72,6 +72,18 @@ FROM northwind.`order details`
 JOIN orders ON northwind.`order details`.OrderID = orders.OrderID
 WHERE YEAR(orders.OrderDate) = '1997'
 GROUP BY MONTH(orders.OrderDate)
+-- j'affiche les mois, les chiffre mensuelle et avec le where je defini quelle année.
 
--- 
+--9 Depuis quelle date le client « Du monde entier » n’a plus commandé ?
+SELECT orders.OrderDate AS `Date de la dernière commande`
+FROM orders
+JOIN northwind.`order details` ON northwind.`order details`.OrderID = orders.OrderID
+WHERE orders.OrderDate = (SELECT MAX(orders.OrderDate) FROM orders WHERE orders.ShipName LIKE 'Du%') 
+GROUP BY orders.OrderDate
+-- je demande toutes les dates de commande du client Du monde entier et je prend la dernière enregistrer.
+
+--10 – Quel est le délai moyen de livraison en jours ?
+SELECT ROUND(AVG(DATEDIFF(orders.ShippedDate, orders.OrderDate))) AS `Délai moyen de livraison en jours`
+FROM orders
+-- j'utilise le round pour enlever les décimal, avg pour la moyenne, datediff pour recuperer en nombre la difference entre la date de debut commande et la livraison.
 
