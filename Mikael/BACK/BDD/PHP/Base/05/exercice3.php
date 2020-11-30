@@ -18,6 +18,7 @@
 	}
 	th{
 		border-style:solid;
+        background-color:red;
 	}
 	td{
 		border-style:solid;
