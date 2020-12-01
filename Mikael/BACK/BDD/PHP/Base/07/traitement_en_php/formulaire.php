@@ -36,8 +36,10 @@
           
 		<form enctype="multipart/form-data" action="./function.php" method="post">
 			
-		  <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-	  	Envoyez ce fichier : <input name="userfile" type="file" />
+      <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+      <div>
+      <input name="userfile" type="file" />
+      </div>
 			<input type="submit" value="Envoyer le fichier" />
 		</form>
 
