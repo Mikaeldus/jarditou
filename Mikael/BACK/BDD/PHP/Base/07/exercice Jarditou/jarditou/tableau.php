@@ -184,9 +184,8 @@
         <form action="./upload.php" method="POST" enctype="multipart/form-data">
             <fieldset>
                 <div>
-                    <label for="file" class="btn btn-primary"><strong>Ajouter un fichier :</strong></label><br>
                     <input type="file" name="file" class="btn btn-primary" id="file" placeholder="Sélectionnez ...">
-                    <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Envoyer">
+                    <input type="submit" class="btn btn-primary" name="submit" id="submit" value="Ajouter">
                 </div>
             </fieldset>
         </form>
