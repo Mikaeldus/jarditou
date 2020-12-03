@@ -142,7 +142,7 @@ var_dump(array_values($array2));
 ?>
 
 <?php
-/* Mélange les éléments d'un tableau, ette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. */
+/* Mélange les éléments d'un tableau, cette fonction retourne TRUE en cas de succès ou FALSE si une erreur survient. */
 echo'Function shuffle()<br>'."\n";
 $numbers = range(1, 20);
 shuffle($numbers);
