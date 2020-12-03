@@ -7,6 +7,7 @@
 </head>
 <body>
     <div>
+    <!-- tant que $a n'est pas egale à 500 alors la boucle continu  -->
         <?php
 		$a = 1;
 		while($a < 500) {

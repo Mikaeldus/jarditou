@@ -9,6 +9,7 @@
     <title>Exercice php</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<style>
+	/* un peu de style  */
 	caption{
 		border-style:solid;
 	}
@@ -29,7 +30,7 @@
 	<div>
     <table>
         <caption><strong>Table de multiplication</strong></caption>
-		
+		<!-- je determine les deux variables nombre qui font office de struture pour le tableau et à chaque champ le résultat des deux nombres -->
         <thead>
             <tr>
 			<th></th>

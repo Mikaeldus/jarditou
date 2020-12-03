@@ -1,5 +1,5 @@
 <?php
-    // si on a cliquer sur le bouton envoyer (si on a la valeur du bouton envoyé en post)
+    // si on a cliquer sur le bouton envoyer
     if (isset($_POST['submit'])) {
         // on définis les type de fichiers acceptés
         $aMimeTypes = array('image/gif', 'image/jpg', 'image/jpeg', 'image/pjpeg', 'image/png', 'image/x-png', 'image/tiff');
@@ -16,9 +16,9 @@
         if (in_array($mimetype, $aMimeTypes)) {
             // récupération de l'extension du fichier et stockage dans une variable
             $extension = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
-        // stockage du chemein de destintaion dans une variable
+        // stockage du chemin de destination dans une variable
             $upload_dir = 'assets/img/';
-            // renommage du fichier, facultatif, selon le besoin
+            // renommage du fichier
             $_FILES['file']['name'] = 1;
 			$nameExt = '.'.$extension;
             // indication du chemin + nom de fichier pour le déplacement
@@ -30,10 +30,9 @@
                // message de confirmation
                echo ' Upload valider';
 ?>
-
 <?php
             } else {
-            // Le type n'est pas autorisé, donc ERREUR
+            // Le fichier n'est pas valider
             echo ' Upload non valide';
              ?>
                 <?php
