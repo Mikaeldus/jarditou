@@ -31,7 +31,7 @@ var_dump($Result);
 ?>
 
 <?php
-/* Permet de trier et devoir les différence dans un tableau */
+/* Permet de trier et de voir les différence dans un tableau */
 echo ' Function array_diff()<br>'."\n";
 $array1 = array("Volvo", "BMW", "Citroen");
 $array2 = array("Volvo", "BMW", "Toyota", "Picasso");

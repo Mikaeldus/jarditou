@@ -7,7 +7,7 @@ echo 'Tableaux simples<br>'."\n";
 ?>
 
 <?php
-/* Permet d'afficher l'index ety le champ d'un tableau */
+/* Permet d'afficher l'index et le champ d'un tableau */
 echo'Tableaux à plusieurs dimensions<br>'."\n";
 	$tab1[] = array(1, "janvier", "2016"); 
     $tab1[] = array(2, "février", "2017"); 
